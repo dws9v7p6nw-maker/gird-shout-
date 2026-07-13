@@ -1,0 +1,6 @@
+# GridScout the website needs NO Python packages — it is a static HTML/CSS/JS site.
+# This file exists only so a build system that assumes "has .py files -> pip install"
+# (e.g. Render auto-detect) doesn't fail looking for requirements.txt.
+# The .py scripts here (gen_predict.py, gen_verdicts.py, gen_lookups.py) are offline
+# backtest generators you run locally with `python gen_x.py` — they are not part of
+# the deployed site and use only the Python standard library.

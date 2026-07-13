@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: gridscout
+    runtime: static
+    staticPublishPath: ./gridscout
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
